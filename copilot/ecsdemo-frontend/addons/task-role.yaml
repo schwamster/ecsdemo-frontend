@@ -22,6 +22,11 @@ Resources:
             Action:
               - ec2:DescribeSubnets
             Resource: "*"
+          - Sid: S3Text
+            Effect: Allow
+            Action:
+              - s3:ListAllMyBuckets
+            Resource: "*"
 
 Outputs:
   # You also need to output the IAM ManagedPolicy so that Copilot can inject it to your ECS task role.
